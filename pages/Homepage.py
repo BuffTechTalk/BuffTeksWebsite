@@ -1,7 +1,14 @@
 import streamlit as st
 
+# setup page setttings
+st.set_page_config(
+    page_title="Welcome to PythonX",
+    page_icon="👋",
+)
 
-st.image("./image/PythonXPicture.png")
+
+# load pythonx logo
+st.image("../image/PythonXPicture.png")
 
 st.markdown("# :question: What is PythonX")
 
