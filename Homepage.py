@@ -8,7 +8,7 @@ st.set_page_config(
 
 
 # load pythonx logo
-st.image("../image/PythonXPicture.png")
+st.image("./image/PythonXPicture.png")
 
 st.markdown("# :question: What is PythonX")
 
@@ -33,3 +33,5 @@ st.markdown(
 
     """
 )
+
+
