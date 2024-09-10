@@ -33,7 +33,7 @@ def code_editor(height="300px", sample_code = "", editor_label = "",min_lines = 
 
             try: 
                 result = subprocess.run(
-                            ["python3", "./webpages/input_code.py"],  # use Python3 command to execute file
+                            ["python", "./webpages/input_code.py"],  # use python or python3 command to execute file
                             capture_output=True,            # Capture both stdout and stderr
                             text=True,                      # Ensure the output is returned as a string
                             timeout=10                      # Timeout after 10 seconds

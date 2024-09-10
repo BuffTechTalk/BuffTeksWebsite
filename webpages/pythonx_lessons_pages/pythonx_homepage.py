@@ -4,7 +4,7 @@ def pythonx_homepage():
     # load pythonx logo
     st.image("./images/PythonXPicture.png")
 
-    st.markdown("# :question: What is PythonX")
+    st.header(":question: What is PythonX")
 
     st.markdown(
         """:blush: Computer programming is the art of designing and creating instructions for computers to follow and execute in the form of software programs. It involves using programming languages, algorithms, and data structures to solve problems and accomplish tasks. With the advancement of technology, programming has expanded beyond traditional computer platforms to include smartphones, smartwatches, and even automobiles. It has also become a powerful tool in other fields such as chemistry, biology, finance, and more. 
@@ -12,7 +12,7 @@ def pythonx_homepage():
     )
 
 
-    st.markdown("# :question: Why Choose Python")
+    st.header(":question: Why Choose Python")
 
     st.markdown(
         """
