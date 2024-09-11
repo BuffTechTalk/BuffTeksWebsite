@@ -8,4 +8,5 @@ from .reference import reference
 from .pythonx_lessons_pages.pythonx_homepage import pythonx_homepage
 from .pythonx_lessons_pages.pythonx_lesson1 import pythonx_lesson1
 from .pythonx_lessons_pages.pythonx_lesson2 import pythonx_lesson2  
-from .pythonx_lessons_pages.pythonx_lesson3 import pythonx_lesson3 
+from .pythonx_lessons_pages.pythonx_lesson3 import pythonx_lesson3
+from .outstanding_members import outstanding_members

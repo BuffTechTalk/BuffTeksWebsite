@@ -60,14 +60,27 @@
         }
 
         .faculty img {
-            height: 300px;
-            width: 200px;
+            height: 210px;
+            width: 140px;
             margin-right: 1rem;
         }
 
         .faculty-info {
             flex: 1;
         }
+
+        .faculty-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Align items at the top */
+        }
+
+        .faculty {
+            flex: 1;
+            margin: 0 10px; /* Add spacing between the two faculty members */
+        }
+
 
         .join {
             text-align: center;
@@ -112,28 +125,30 @@
 
         <section>
             <h2>Faculty Advisors</h2>
-
-            <div class="faculty">
-                <img src="https://www.wtamu.edu/_files/images/academics/college-business/headshots/zhang-carl-22.png" alt="Dr. Carl Zhang">
-                <div class="faculty-info">
-                    <strong>Dr. Carl Zhang</strong><br>
-                    CC 208D<br>
-                    
-                    <a href="mailto:czhang@wtamu.edu">czhang@wtamu.edu</a>
+            <div class="faculty-container">
+                <div class="faculty">
+                    <img src="https://www.wtamu.edu/_files/images/academics/college-business/headshots/zhang-carl-22.png" alt="Dr. Carl Zhang">
+                    <div class="faculty-info">
+                        <strong>Dr. Carl Zhang</strong><br>
+                        <!-- CC 208D<br> -->
+                        
+                        <a href="mailto:czhang@wtamu.edu">czhang@wtamu.edu</a>
+                    </div>
+                </div>
+        
+                <div class="faculty">
+                    <img src="https://www.wtamu.edu/_files/images/academics/college-business/headshots/babb-jeffry-22.png" alt="Dr. Jeffry Babb">
+                    <div class="faculty-info">
+                        <strong>Dr. Jeffry Babb</strong><br>
+                        BuffTeks Founder<br>
+                        <!-- CC 214E<br>
+                        
+                        <a href="mailto:jbabb@wtamu.edu">jbabb@wtamu.edu</a> -->
+                    </div>
                 </div>
             </div>
-            
-            <div class="faculty">
-                <img src="https://www.wtamu.edu/_files/images/academics/college-business/headshots/babb-jeffry-22.png" alt="Dr. Jeffry Babb">
-                <div class="faculty-info">
-                    <strong>Dr. Jeffry Babb</strong><br>
-                    CC 214E<br>
-                    
-                    <a href="mailto:jbabb@wtamu.edu">jbabb@wtamu.edu</a>
-                </div>
-            </div>
-            
         </section>
+
 
         <div class="join">
             <h2>Join Us</h2>
