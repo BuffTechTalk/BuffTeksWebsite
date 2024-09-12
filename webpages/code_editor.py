@@ -2,6 +2,12 @@
 import streamlit as st
 import subprocess
 from streamlit_ace import st_ace
+import re
+
+# check if user import python module
+def analyze_imports(code):
+    pattern = r'^\s*(from\s+\S+\s+)?import\s+(\S+)(\s+as\s+\S+)?'
+    return re.findall(pattern, code, re.MULTILINE)
 
 
 def code_editor(height="300px", sample_code = "", editor_label = "",min_lines = 20):
@@ -26,6 +32,9 @@ def code_editor(height="300px", sample_code = "", editor_label = "",min_lines = 
 
 
                 )
+        if analyze_imports(content):
+            st.warning("Code Editor does not support importing packages")
+            return
 
         if content:
             with open("./webpages/input_code.py", "w") as f:
