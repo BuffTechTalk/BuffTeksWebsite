@@ -10,3 +10,4 @@ from .pythonx_lessons_pages.pythonx_lesson1 import pythonx_lesson1
 from .pythonx_lessons_pages.pythonx_lesson2 import pythonx_lesson2  
 from .pythonx_lessons_pages.pythonx_lesson3 import pythonx_lesson3
 from .outstanding_members import outstanding_members
+from .cis_tech_challenge_pages.cis_tech_challenge_homepage import cis_tech_challenge_homepage

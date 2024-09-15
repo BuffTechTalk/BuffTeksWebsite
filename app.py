@@ -40,6 +40,9 @@ elif page_label == "Lesson2":
 elif page_label == "Lesson3":
     pg.pythonx_lesson3()
 
+# block of CIS Tech Challenge Event
+elif page_label == "CIS Tech Challenge":
+    pg.cis_tech_challenge_homepage()
 
 # block for testing page
 elif page_label == "Testing":

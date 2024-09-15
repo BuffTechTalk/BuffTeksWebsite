@@ -13,9 +13,11 @@ def navigation_bar():
 
         page_label = sac.menu([
             sac.MenuItem('Homepage', icon='house'),
-            sac.MenuItem('Outstanding Members', icon='bi bi-trophy'),
+            sac.MenuItem('Outstanding Members', icon='award'),
             sac.MenuItem('BuffTeks Project', icon='bi bi-laptop'),
-            sac.MenuItem('BuffTeks Event', icon='calendar-event'),
+            sac.MenuItem('BuffTeks Event', icon='calendar-event', children=[
+                    sac.MenuItem('CIS Tech Challenge', icon='bi bi-trophy'),
+            ]),
             sac.MenuItem('BuffTeks Classroom', icon='book', children=[
                 sac.MenuItem('About Classroom', icon='question-circle'),
                 sac.MenuItem('PythonX', icon='bi bi-filetype-py', children=[
