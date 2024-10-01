@@ -48,40 +48,21 @@ from webpages import code_editor as ce
 #             tooltip=f"{row['city']}"
 #         ).add_to(m)
 #     return m
+import psutil
+
+def get_connected_ips():
+    connections = psutil.net_connections()
+    ips = []
+    for conn in connections:
+        if conn.status == psutil.CONN_ESTABLISHED:
+            ips.append(conn.raddr.ip)
+    return ips
+
+
 
 def testing():
     st.title("Testing Page")
-    st.title("Title")
-    st.markdown(f"The remote ip is {get_remote_ip()}")
-    st.write(st.context.headers)
-from streamlit import runtime
-from streamlit.runtime.scriptrunner import get_script_run_ctx
-from streamlit.web.server.websocket_headers import _get_websocket_headers
-
-def get_forwarded_ip():
-    headers = _get_websocket_headers()
-    # Example: "X-Forwarded-For': '13.51.91.225, 162.158.90.188'"
-    x_forwarded_for = headers['X-Forwarded-For']
-    first_ip = x_forwarded_for.split(', ')[0]
-
-    return first_ip
-
-def get_remote_ip() -> str:
-    """Get remote ip."""
-
-    try:
-        ctx = get_script_run_ctx()
-        if ctx is None:
-            return None
-
-        session_info = runtime.get_instance().get_client(ctx.session_id)
-        if session_info is None:
-            return None
-    except Exception as e:
-        return None
-
-    return session_info.request.remote_ip
-
+    st.write(get_connected_ips())
 
 
     # ce.code_editor()
