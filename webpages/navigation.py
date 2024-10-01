@@ -10,7 +10,7 @@ def navigation_bar():
     
     with st.sidebar:
         st.image("./images/BuffTeksLogo.png", caption="Building Skills, Crafting Code, Bridging Communities")
-
+    
         page_label = sac.menu([
             sac.MenuItem('Homepage', icon='house'),
             sac.MenuItem('Outstanding Members', icon='award'),
@@ -27,7 +27,7 @@ def navigation_bar():
                     sac.MenuItem('Lesson3', icon='3-square'),
                     ]),       
             ]),
-            # sac.MenuItem("Testing", icon='fingerprint'),
+            sac.MenuItem("Testing", icon='fingerprint'),
             sac.MenuItem(type='divider'),
             sac.MenuItem('Link', type='group', children=[
                 sac.MenuItem('Join Us', icon='person-plus', href='https://wtamuuw.az1.qualtrics.com/jfe/form/SV_2boQtKLCptO33HE'),

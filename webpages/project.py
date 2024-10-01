@@ -1,4 +1,5 @@
 import streamlit as st
+import streamlit_antd_components as sac
 import time
 
 def project():
@@ -13,12 +14,22 @@ def project():
     # Project Gallery
     st.header("Project Gallery")
     st.divider()
-    st.image("./images/CommunityLinkLogo.svg")
     
-    st.markdown("""
-        ### Main Contributors:
-        - Darrian Lambert, Kim Sundblom, and Jessica Zoll
+    col_logo, clo_contributors = st.columns(2)
+    with col_logo:
+        st.image("./images/CommunityLinkLogo.svg")
 
+    with clo_contributors:
+        st.markdown("""
+            #### Main Contributors:
+            - Darrian Lambert
+            - Kim Sundblom
+            - Jessica Zoll
+            """)
+    sac.buttons([
+            sac.ButtonsItem(label='View Source Code', icon='github',color='#000000', href='https://github.com/wtamu-buffteks/CommunityLink'),
+        ], label='', align='left')
+    st.markdown("""
         ### Introduction: 
 
         - The Community Link project is dedicated to efficiently organizing, tracking, and distributing hard goods and monetary contributions in support of non-profit organizations. 
